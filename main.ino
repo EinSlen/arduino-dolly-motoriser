@@ -45,7 +45,6 @@ void loop() {
         unsigned int servopos = bluetooth.read();
         unsigned int servopos1 = bluetooth.read();
         unsigned int realservo = (servopos1 * 256) + servopos;
-        int servo1 = realservo;
         PWM = realservo;
         Serial.print("Bluetooth info :");
         Serial.println(realservo);
