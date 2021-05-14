@@ -72,6 +72,10 @@ void loop() {
             analogWrite(moteurB_PWM,PWM);  // Envoi du signal PWM sur la sortie analogique 3
             Serial.print("Valeur PWM : ");  // Affichage sur le moniteur série du texte « Valeur PWM »
             Serial.println(PWM);  // Affichage sur le moniteur série de la valeur PWM
-    }
+    } else {
+          digitalWrite(MoteurB_sens, HIGH);
+          Serial.print('Capteur Activé : ');
+          Serial.println(RangeIn);
+        }
   }
 }
